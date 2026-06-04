@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Midnight Cyber Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-box" id="login-container">
+        <h1 class="logo-title">VIDYARTHI</h1>
+        <p class="subtitle">Secure Student Portal Matrix</p>
+        
+        <form id="login-form">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Student Portal UID" required autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Access Passkey" required>
+            </div>
+            <button type="submit" id="login-btn">Initialize Connection</button>
+        </form>
+    </div>
+
+    <div class="dashboard-box hidden" id="dashboard-container">
+        
+        <header class="dash-header">
+            <h1 id="welcome-msg">Welcome back, Student!</h1>
+            
+            <div class="fee-status">
+                <span class="dot" id="fee-dot"></span>
+                <span class="fee-hover-box" id="fee-text">Checking Status...</span>
+            </div>
+        </header>
+
+        <div class="dash-grid">
+            
+            <section class="portal-card pink-glow">
+                <h3>📌 Institutional Circulars & Notices</h3>
+                <div class="circular-list">
+                    <div class="circular-item">
+                        <span class="circular-date">June 02, 2026</span>
+                        <p>The upcoming Mock Exam Series analytics will live-update mapping values straight to your guardian graphics node instantly upon dynamic calculation execution loops.</p>
+                    </div>
+                    <div class="circular-item">
+                        <span class="circular-date">May 28, 2026</span>
+                        <p>Class schedules updated. Please ensure local system sync tools remain active before opening testing vectors to prevent accidental integrity flag alerts.</p>
+                    </div>
+                    <div class="circular-item">
+                        <span class="circular-date">May 15, 2026</span>
+                        <p>System maintenance completed. High-speed database pipelines are fully functional across the Class 8 and Class 9 terminal arrays.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-card blue-glow" id="test-section">
+                <div class="test-header">
+                    <h3>✍️ Active Examination Module</h3>
+                    <div id="test-timer" class="timer-badge hidden">Time Left: 10:00</div>
+                </div>
+                
+                <div id="test-active-area" class="test-scroll-container">
+                    
+                    <div id="test-intro">
+                        <p id="portal-test-title" class="test-desc">Test Name: Loading Active Session...</p>
+                        <p class="test-rules">⚠️ Note: Leaving this tab or changing windows will instantly compromise, log, and cancel your test session.</p>
+                        
+                        <p class="test-rules">Make sure you are sitting in a quiet room. Your camera and background browser processes are being logged actively.</p>
+                        <p class="test-rules">Ensure your network connection is stable before hitting the launch button below.</p>
+                        
+                        <button id="start-test-btn" class="action-btn">Launch Examination</button>
+                    </div>
+                    
+                    <div id="render-q-text"></div>
+                    <div id="render-options-grid" class="options-grid"></div>
+                    
+                </div>
+            </section>
+
+            <section class="portal-card blue-glow graph-card">
+                <h3>📊 Parent Insights Engine & Metrics Timeline</h3>
+                
+                <div class="graph-wrapper">
+                    <div class="y-axis-labels">
+                        <span>100%</span>
+                        <span>75%</span>
+                        <span>50%</span>
+                        <span>25%</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="graph-container">
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        
+                        <div class="mock-data-layer" id="live-graph-dots-layer"></div>
+                    </div>
+                </div>
+                
+                <div class="x-axis-labels" id="dynamic-x-axis"></div>
+
+                <div class="table-responsive">
+                    <table class="progress-table">
+                        <thead>
+                            <tr>
+                                <th>Session Date</th>
+                                <th>Evaluation Reference Parameter</th>
+                                <th>Scored Grade</th>
+                                <th>Security Integrity Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="progress-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>
