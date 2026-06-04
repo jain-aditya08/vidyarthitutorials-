@@ -1,0 +1,307 @@
+/* Premium Midnight Cyber Aesthetic Dashboard Extensions */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0D0F12;
+    background-image: radial-gradient(circle at 50% 50%, #161A22 0%, #0d0f12 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Auth Container Layout */
+.auth-box {
+    background: rgba(20, 24, 30, 0.92);
+    border: 2px solid #00F0FF;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.69);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.logo-title {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #8A99AD;
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+}
+
+.input-group { margin-bottom: 20px; }
+
+input {
+    width: 100%;
+    padding: 14px 20px;
+    background: #0F131A;
+    border: 1.5px solid #1F2633;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #00F0FF;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+    background: #131924;
+    transform: translateY(-2px);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #00F0FF, #1b45df);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(27, 69, 223, 0.5);
+}
+
+.error-shake {
+    animation: shake 0.4s ease-in-out;
+    border-color: #ff3333 !important;
+    box-shadow: 0 0 25px rgba(255, 51, 51, 0.6) !important;
+}
+
+.dashboard-box {
+    width: 100%;
+    max-width: 1280px;
+    background: rgba(16, 20, 26, 0.95);
+    border: 1px solid #2C3545;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hidden { display: none !important; }
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2C3545;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+#welcome-msg { color: #fff; font-size: 1.8rem; font-weight: 700; }
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+}
+
+.portal-card {
+    background: #12161F;
+    border: 1px solid #1F2633;
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.portal-card:hover {
+    transform: translateY(-6px);
+}
+
+.pink-glow:hover {
+    border-color: #00FF66;
+    box-shadow: 0 10px 30px rgba(0, 255, 102, 0.15);
+}
+
+.blue-glow:hover {
+    border-color: #00F0FF;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.circular-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    max-height: 380px;          
+    overflow-y: auto;          
+    padding-right: 5px;
+    scroll-behavior: smooth;
+}
+
+.circular-list::-webkit-scrollbar {
+    width: 0px;                
+    background: transparent;   
+}
+
+.circular-item {
+    background: #171D2A;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #00FF66;
+}
+
+.circular-item p {
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.circular-date { 
+    color: #00FF66; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+/* Exam Panel Container Systems */
+#test-section {
+    display: flex;
+    flex-direction: column;
+    max-height: 440px;
+}
+
+#test-active-area, .test-scroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 340px;             
+    overflow-y: auto;
+    padding-right: 5px;
+    scroll-behavior: smooth;
+}
+
+#test-active-area::-webkit-scrollbar, .test-scroll-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.test-header { display: flex; justify-content: space-between; align-items: center; }
+.timer-badge { background: #FF3333; color: white; padding: 4px 10px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; box-shadow: 0 0 10px rgba(255,51,51,0.4); }
+.test-desc { color: #fff; font-size: 1.05rem; margin-top: 5px; }
+.test-rules { color: #8A99AD; font-size: 0.85rem; margin: 15px 0 20px 0; }
+.action-btn { background: #00F0FF; color: #0D0F12; margin-top: 10px;}
+.action-btn:hover { box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
+
+.question-container { background: #171D2A; padding: 18px; border-radius: 8px; margin-bottom: 20px; line-height: 1.6; color: #E2E8F0; border: 1px solid #232D42;}
+.options-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 10px; }
+
+.option-btn {
+    background: #1A2130;
+    border: 1px solid #2C3545;
+    color: #CDD6E0;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.option-btn:hover {
+    background: #242E42;
+    border-color: #00F0FF;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Parent Insights Graph Vectors */
+.graph-card { grid-column: span 2; }
+.graph-wrapper {
+    display: flex;
+    height: 200px;
+    margin-top: 15px;
+    position: relative;
+}
+.y-axis-labels { display: flex; flex-direction: column; justify-content: space-between; color: #52667D; font-size: 0.8rem; width: 40px; padding-bottom: 10px;}
+.graph-container {
+    flex-grow: 1;
+    border-bottom: 2px solid #2C3545;
+    border-left: 2px solid #2C3545;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(44, 53, 69, 0.4);
+}
+.x-axis-labels { display: flex; justify-content: space-around; color: #52667D; font-size: 0.8rem; margin: 8px 0 25px 40px; }
+
+.mock-data-layer { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+.data-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.data-dot:hover {
+    transform: translate(-50%, 50%) scale(1.4);
+    box-shadow: 0 0 15px currentColor;
+}
+
+.table-responsive { width: 100%; overflow-x: auto; margin-top: 15px; }
+.progress-table { width: 100%; border-collapse: collapse; text-align: left; }
+.progress-table th, .progress-table td { padding: 14px 16px; border-bottom: 1px solid #1F2633; font-size: 0.9rem; }
+.progress-table th { color: #52667D; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; }
+.progress-table td { color: #CDD6E0; }
+
+.clickable-row {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.clickable-row:hover {
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.text-green { color: #00FF66 !important; font-weight: 600; }
+.text-amber { color: #FFCC00 !important; font-weight: 600; }
+.text-blue { color: #00F0FF !important; font-weight: 600; }
+
+.badge { padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+.badge.verified { background: rgba(0, 255, 102, 0.1); color: #00FF66; border: 1px solid rgba(0,255,102,0.2); }
+.badge.review { background: rgba(255, 204, 0, 0.1); color: #FFCC00; border: 1px solid rgba(255,204,0,0.2); }
+
+.fee-status { position: relative; display: flex; align-items: center; cursor: pointer; background: #12161F; padding: 8px 16px; border-radius: 20px; border: 1px solid #1F2633;}
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 8px;}
+.dot.paid { background-color: #00FF66; box-shadow: 0 0 10px #00FF66; }
+.dot.unpaid { background-color: #FF3333; box-shadow: 0 0 10px #FF3333; }
+.fee-hover-box { color: #fff; font-size: 0.85rem; font-weight: 600; }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
